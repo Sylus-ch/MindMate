@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能助手 - MindMate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="diary.html">心情日记</a></li>
+                    <li><a href="chat.html">智能助手</a></li>
+                    <li><a href="#" id="whiteNoise">白噪声</a></li>
+                    <li><a href="notifications.html">通知提醒</a></li>
+                    <li><a href="#" id="logout">退出</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-header">
+                <h1>我是你的MindMate</h1>
+            </div>
+            
+            <div class="chat-messages">
+                <!-- 聊天消息将通过JavaScript动态添加 -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" placeholder="输入消息..." id="messageInput">
+                <button class="btn" id="sendButton">发送</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

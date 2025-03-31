@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心情日记 - MindMate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="diary.html">心情日记</a></li>
+                    <li><a href="chat.html">智能助手</a></li>
+                    <li><a href="#" id="whiteNoise">白噪声</a></li>
+                    <li><a href="notifications.html">通知提醒</a></li>
+                    <li><a href="#" id="logout">退出</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="diary-container">
+            <h1>写心情日记</h1>
+            <div class="mood-selector">
+                <label>今天的心情</label>
+                <div class="mood-options">
+                    <button data-mood="happy">😊 开心</button>
+                    <button data-mood="neutral">😐 一般</button>
+                    <button data-mood="sad">😔 难过</button>
+                    <button data-mood="angry">😠 生气</button>
+                    <button data-mood="anxious">😰 焦虑</button>
+                </div>
+            </div>
+            
+            <form id="diaryForm">
+                <div class="form-group">
+                    <label for="diaryTitle">标题</label>
+                    <input type="text" id="diaryTitle" name="title" placeholder="给这一天的心情写个标题吧">
+                </div>
+                <div class="form-group">
+                    <label for="diaryContent">内容</label>
+                    <textarea id="diaryContent" name="content" rows="8" placeholder="记录下今天的心情和感想..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn">保存</button>
+                    <a href="calendar.html" class="btn btn-secondary">取消</a>
+                </div>
+            </form>
+            
+            <div class="back-to-calendar">
+                <a href="calendar.html">返回日历</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/diary.js"></script>
+</body>
+</html>

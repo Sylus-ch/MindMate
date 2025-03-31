@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人资料 - MindMate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="diary.html">心情日记</a></li>
+                    <li><a href="chat.html">智能助手</a></li>
+                    <li><a href="#" id="whiteNoise">白噪声</a></li>
+                    <li><a href="notifications.html">通知提醒</a></li>
+                    <li><a href="#" id="logout">退出</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="profile-container">
+            <h1>编辑个人信息</h1>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="profileUsername">用户名</label>
+                    <input type="text" id="profileUsername" name="username" value="CarouselII" readonly>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">年龄</label>
+                        <input type="number" id="profileAge" name="age" min="1" value="28">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性别</label>
+                        <select id="profileGender" name="gender">
+                            <option value="male">男</option>
+                            <option value="female" selected>女</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">手机号</label>
+                    <input type="tel" id="profilePhone" name="phone" value="13800138000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">个人简介</label>
+                    <textarea id="profileBio" name="bio" rows="4">我是一个热爱生活的人，喜欢记录每天的点点滴滴。</textarea>
+                </div>
+                
+                <button type="submit" class="btn">保存</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
