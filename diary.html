@@ -12,11 +12,7 @@
             <h1 class="logo">MindMate</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="diary.html">心情日记</a></li>
-                    <li><a href="chat.html">智能助手</a></li>
-                    <li><a href="whitenoise.html" id="whiteNoise">白噪声</a></li>
-                    <li><a href="notifications.html">通知提醒</a></li>
-                    <li><a href="index.html" id="logout">退出</a></li>
+                    <li><a href="index.html" id="logout">返回首页</a></li>
                 </ul>
             </nav>
         </header>
@@ -26,11 +22,28 @@
             <div class="mood-selector">
                 <label>今天的心情</label>
                 <div class="mood-options">
-                    <button data-mood="happy">😊 开心</button>
-                    <button data-mood="neutral">😐 一般</button>
-                    <button data-mood="sad">😔 难过</button>
-                    <button data-mood="angry">😠 生气</button>
-                    <button data-mood="anxious">😰 焦虑</button>
+                    <div class="mood-options">
+                        <button data-mood="happy">
+                            <img src="diary/happy.png" alt="开心" class="mood-icon">
+                            <span>开心</span>
+                        </button>
+                        <button data-mood="neutral">
+                            <img src="diary/neutral.png" alt="一般" class="mood-icon">
+                            <span>一般</span>
+                        </button>
+                        <button data-mood="sad">
+                            <img src="diary/sad.png" alt="难过" class="mood-icon">
+                            <span>难过</span>
+                        </button>
+                        <button data-mood="angry">
+                            <img src="diary/angry.png" alt="生气" class="mood-icon">
+                            <span>生气</span>
+                        </button>
+                        <button data-mood="anxious">
+                            <img src="diary/anxious.png" alt="焦虑" class="mood-icon">
+                            <span>焦虑</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             
