@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>智能助手 - MindMate</title>
+    <title>MindMate - 心理健康助手</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,29 +14,25 @@
                 <ul>
                     <li><a href="diary.html">心情日记</a></li>
                     <li><a href="chat.html">智能助手</a></li>
-                    <li><a href="#" id="whiteNoise">白噪声</a></li>
+                    <li><a href="whitenoise.html" id="whiteNoise">白噪声</a></li>
                     <li><a href="notifications.html">通知提醒</a></li>
                     <li><a href="#" id="logout">退出</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main class="chat-container">
-            <div class="chat-header">
-                <h1>我是你的MindMate</h1>
-            </div>
-            
-            <div class="chat-messages">
-                <!-- 聊天消息将通过JavaScript动态添加 -->
-            </div>
-            
-            <div class="chat-input">
-                <input type="text" placeholder="输入消息..." id="messageInput">
-                <button class="btn" id="sendButton">发送</button>
+        <main class="welcome-page">
+            <h2>欢迎来到MindMate！</h2>
+            <blockquote>
+                "不要为明天忧虑，因为明天自有明天的忧虑；一天的难处一天当就够了。"
+                <footer>——《圣经·马太福音》</footer>
+            </blockquote>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn">登录</a>
             </div>
         </main>
     </div>
 
-    <script src="js/chat.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

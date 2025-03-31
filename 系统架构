@@ -7,10 +7,17 @@ mindmate/
 ├── chat.html           # 智能助手聊天页面
 ├── notifications.html  # 通知中心页面
 ├── profile.html        # 个人资料页面
+├── whitenoise.html     # 白噪音页面
+├── report.html         # 心理测评报告页面
 ├── css/
 │   └── style.css       # 主样式文件
 └── js/
     ├── main.js         # 主JavaScript文件
     ├── auth.js         # 认证相关功能
     ├── diary.js        # 日记功能
-    └── chat.js         # 聊天功能
+    ├── calendar.js     # 日历功能
+    ├── chat.js         # 聊天功能
+    ├── notifications.js # 通知功能
+    ├── profile.js      # 个人资料功能
+    ├── whitenoise.js   # 白噪音功能
+    └── report.js       # 心理测评报告功能

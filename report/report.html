@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理测评报告 - MindMate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="diary.html">心情日记</a></li>
+                    <li><a href="chat.html">智能助手</a></li>
+                    <li><a href="whitenoise.html">白噪声</a></li>
+                    <li><a href="notifications.html">通知提醒</a></li>
+                    <li><a href="#" id="logout">退出</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="report-container">
+            <h1>心理健康测评报告</h1>
+            <div class="report-meta">
+                <p>测评时间: <span id="report-date">2024-01-18 08:45</span></p>
+            </div>
+            
+            <div class="overall-score">
+                <h2>总体评分</h2>
+                <div class="score-circle">
+                    <div class="score-value">85</div>
+                    <div class="score-max">/100</div>
+                </div>
+                <p class="score-description">心理健康状况良好</p>
+            </div>
+            
+            <div class="score-grid">
+                <div class="score-item">
+                    <h3>情绪指数</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" style="width: 78%"></div>
+                        <span>78/100</span>
+                    </div>
+                    <p class="score-text">情绪状态稳定</p>
+                </div>
+                
+                <div class="score-item">
+                    <h3>压力指数</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" style="width: 82%"></div>
+                        <span>82/100</span>
+                    </div>
+                    <p class="score-text">压力管理良好</p>
+                </div>
+                
+                <div class="score-item">
+                    <h3>社交能力</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" style="width: 90%"></div>
+                        <span>90/100</span>
+                    </div>
+                    <p class="score-text">社交能力出色</p>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>详细指标分析</h2>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>情绪变化趋势</h2>
+                <div class="chart-container">
+                    <canvas id="emotionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>专业建议</h2>
+                
+                <div class="advice-item">
+                    <h3>情绪管理</h3>
+                    <p>建议通过冥想、深呼吸等方式来缓解压力，每天保持15-20分钟的放松练习。可以尝试使用专业的冥想APP来辅助练习。</p>
+                </div>
+                
+                <div class="advice-item">
+                    <h3>情感调整</h3>
+                    <p>保持规律的作息时间，每天保证7-8小时的充足睡眠。睡前避免使用电子设备，创造良好的睡眠环境。</p>
+                </div>
+                
+                <div class="advice-item">
+                    <h3>社交建议</h3>
+                    <p>可以适当参加一些社交活动，与朋友保持联系。建议每周至少安排1-2次与朋友见面或参加集体活动的时间。</p>
+                </div>
+                
+                <div class="advice-item">
+                    <h3>运动建议</h3>
+                    <p>每周进行3-4次中等强度的运动，每次30-45分钟。可以选择慢跑、游泳或瑜伽等适合自己的运动方式。</p>
+                </div>
+            </div>
+            
+            <div class="report-actions">
+                <button class="btn" id="save-report">保存报告</button>
+                <button class="btn btn-secondary" id="retake-test">重新测试</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>
