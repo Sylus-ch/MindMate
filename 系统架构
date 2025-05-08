@@ -1,0 +1,60 @@
+mindmate-assistant/
+├── client/                  # 前端代码
+├── server/                  # 后端代码
+├── knowledge-base/          # 知识库资源
+├── shared/                  # 前后端共享代码
+├── config/                  # 配置文件
+├── scripts/                 # 实用脚本
+└── docs/                    # 项目文档
+
+
+
+
+client/
+├── public/                  # 静态资源
+│   ├── index.html           # 主页面
+│   ├── assets/              # 静态资源
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── fonts/
+│   └── favicon.ico
+│
+├── src/
+│   ├── components/          # Vue/React组件
+│   │   ├── Chat/
+│   │   │   ├── ChatWindow.vue
+│   │   │   ├── MessageBubble.vue
+│   │   │   └── TestProgress.vue
+│   │   ├── Assessment/
+│   │   │   ├── TestIntro.vue
+│   │   │   └── ResultsView.vue
+│   │   └── Common/
+│   │       ├── Header.vue
+│   │       └── Footer.vue
+│   │
+│   ├── stores/              # 状态管理(Pinia/Redux)
+│   │   ├── chat.js          # 聊天状态
+│   │   ├── assessment.js    # 测试状态
+│   │   └── knowledge.js     # 知识库状态
+│   │
+│   ├── services/            # 服务层
+│   │   ├── api.js           # API调用封装
+│   │   ├── chatService.js   # 聊天逻辑
+│   │   └── testService.js   # 测试逻辑
+│   │
+│   ├── utils/               # 工具函数
+│   │   ├── messageParser.js
+│   │   ├── riskDetector.js
+│   │   └── testScoring.js
+│   │
+│   ├── styles/              # 全局样式
+│   │   ├── variables.scss
+│   │   ├── mixins.scss
+│   │   └── global.scss
+│   │
+│   ├── App.vue              # 根组件
+│   └── main.js              # 应用入口
+│
+└── tests/                   # 前端测试
+    ├── unit/
+    └── e2e
