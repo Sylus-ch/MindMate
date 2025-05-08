@@ -439,49 +439,27 @@ body {
     padding: 10px 20px;
 }
 
-/* 打字动画效果 */
-.typing-text {
-    margin-right: 5px;
+.message {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
 }
 
-.typing-dots {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
+.message.user {
+    background: #007bff;
+    color: white;
+    margin-left: auto;
 }
 
-.typing-dots span {
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: var(--text-light);
-    margin: 0 2px;
-    animation: typing-dot 1.4s infinite ease-in-out;
+.message.bot {
+    background: #f0f0f0;
+    margin-right: auto;
 }
 
-.typing-dots span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.typing-dots span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-@keyframes typing-dot {
-    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
-    30% { opacity: 1; transform: translateY(-3px); }
-}
-
-/* 禁用状态 */
-.chat-input input:disabled {
-    background-color: var(--light-color);
-    cursor: not-allowed;
-}
-
-.chat-input button:disabled {
+.temp-message {
     opacity: 0.7;
-    cursor: not-allowed;
+    font-style: italic;
 }
 
 /* 通知页面 */
