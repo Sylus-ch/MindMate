@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 模拟登录成功
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('username', username);
-                window.location.href = 'diary.html';
+                window.location.href = 'index.html';
             } else {
                 alert('请输入用户名和密码');
             }

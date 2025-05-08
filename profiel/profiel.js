@@ -1,43 +1,32 @@
-// 个人资料功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 加载用户信息
-    loadUserInfo();
-    
-    // 保存个人信息
-    const profileForm = document.getElementById('profileForm');
-    if (profileForm) {
-        profileForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const age = document.getElementById('age').value;
-            const gender = document.getElementById('gender').value;
-            const phone = document.getElementById('phone').value;
-            const bio = document.getElementById('bio').value;
-            
-            // 保存用户信息
-            const userInfo = {
-                username: username,
-                age: age,
-                gender: gender,
-                phone: phone,
-                bio: bio
-            };
-            
-            localStorage.setItem('userInfo', JSON.stringify(userInfo));
-            localStorage.setItem('username', username);
-            
-            alert('个人信息保存成功！');
-        });
-    }
-});
+    // 显示用户信息
+    const username = localStorage.getItem('username') || '未登录';
+    document.getElementById('profileUsername').textContent = username;
 
-function loadUserInfo() {
-    const userInfo = JSON.parse(localStorage.getItem('userInfo')) || {};
+    // 头像上传
+    const avatarUpload = document.getElementById('avatarUpload');
+    const profileAvatar = document.getElementById('profileAvatar');
+    const savedAvatar = localStorage.getItem('userAvatar');
+
+    if (savedAvatar) {
+        profileAvatar.src = savedAvatar;
+    }
+
+    avatarUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                profileAvatar.src = event.target.result;
+                localStorage.setItem('userAvatar', event.target.result);
+                // 同步更新首页头像
+                if (window.opener) {
+                    window.opener.updateUserStatus();
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    });
     
-    document.getElementById('username')?.value = userInfo.username || '';
-    document.getElementById('age')?.value = userInfo.age || '';
-    document.getElementById('gender')?.value = userInfo.gender || '';
-    document.getElementById('phone')?.value = userInfo.phone || '';
-    document.getElementById('bio')?.value = userInfo.bio || '';
-}
+
+});

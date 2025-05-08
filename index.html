@@ -18,6 +18,20 @@
                     <li><a href="notifications.html">通知提醒</a></li>
                 </ul>
             </nav>
+            <div class="user-status">
+                <!-- 登录按钮（未登录时显示） -->
+                <a href="login.html" id="loginBtn" class="btn btn-login">登录</a>
+                
+                <!-- 用户头像（登录后显示） -->
+                <div id="userAvatar" class="user-avatar" style="display: none;">
+                    <img src="./images/default-avatar.png" alt="用户头像" id="avatarImg">
+                    <span id="usernameDisplay" class="username-display"></span>
+                    <div class="user-dropdown">
+                        <a href="profile.html">个人中心</a>
+                        <a href="#" id="logoutBtn">退出登录</a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main class="welcome-page">
@@ -26,9 +40,7 @@
                 "不要为明天忧虑，因为明天自有明天的忧虑；一天的难处一天当就够了。"
                 <footer>——《圣经·马太福音》</footer>
             </blockquote>
-            <div class="auth-buttons">
-                <a href="login.html" class="btn">登录</a>
-            </div>
+            
         </main>
     </div>
 
