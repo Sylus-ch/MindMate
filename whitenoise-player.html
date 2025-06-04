@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>白噪声播放器</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body { background: #fff; margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh;}
+        .mini-player { display: flex; align-items: center; gap: 12px; }
+    </style>
+</head>
+<body>
+    <div class="mini-player">
+        <button id="playBtn" title="播放/暂停" style="font-size:22px;">🎵</button>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" title="音量" style="width:80px;">
+        <audio id="audioPlayer" src="assets/audio/rain.mp3" preload="auto" loop></audio>
+    </div>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const volumeSlider = document.getElementById('volume');
+
+        // 恢复音量
+        const savedVolume = localStorage.getItem('whitenoiseVolume');
+        if (savedVolume) {
+            audioPlayer.volume = volumeSlider.value = savedVolume;
+        }
+
+        playBtn.onclick = function() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        };
+        volumeSlider.oninput = function() {
+            audioPlayer.volume = volumeSlider.value;
+            localStorage.setItem('whitenoiseVolume', volumeSlider.value);
+        };
+        audioPlayer.onplay = audioPlayer.onpause = function() {
+            playBtn.textContent = "🎵";
+        };
+    </script>
+</body>
+</html>

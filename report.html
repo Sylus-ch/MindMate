@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理测评报告 - MindMate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" id="logout">返回首页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="report-container">
+            <h1>心理健康测评报告</h1>
+            <div class="report-meta">
+                <p>测评时间: <span id="report-date"></span></p>
+            </div>
+            
+            <div class="overall-score">
+                <h2>总体评分</h2>
+                <div class="score-circle">
+                    <div class="score-value" id="overall-score"></div>
+                    <div class="score-max">/100</div>
+                </div>
+                <p class="score-description" id="score-description"></p>
+            </div>
+            
+            <div class="score-grid">
+                <div class="score-item">
+                    <h3>情绪指数</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" id="emotion-bar"></div>
+                        <span id="emotion-score"></span>
+                    </div>
+                    <p class="score-text" id="emotion-text"></p>
+                </div>
+                
+                <div class="score-item">
+                    <h3>压力指数</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" id="stress-bar"></div>
+                        <span id="stress-score"></span>
+                    </div>
+                    <p class="score-text" id="stress-text"></p>
+                </div>
+                
+                <div class="score-item">
+                    <h3>社交能力</h3>
+                    <div class="score-bar">
+                        <div class="bar-fill" id="social-bar"></div>
+                        <span id="social-score"></span>
+                    </div>
+                    <p class="score-text" id="social-text"></p>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>详细指标分析</h2>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>情绪变化趋势</h2>
+                <div class="chart-container">
+                    <canvas id="emotionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="report-section">
+                <h2>专业建议</h2>
+                <ul id="suggestion-list"></ul>
+            </div>
+            
+            <div class="report-actions">
+                <button class="btn" id="save-report">保存报告</button>
+                <button class="btn btn-secondary" id="retake-test">重新测试</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/report.js"></script>
+    
+</body>
+</html>
