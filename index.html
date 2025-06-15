@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate - 心理健康助手</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="calendar.html">心情日记</a></li>
+                    <li><a href="chat.html">智能助手</a></li>
+                    <li><a href="whitenoise.html" id="whiteNoise">白噪声</a></li>
+                    <li style="position:relative;">
+                        <a href="notifications.html" id="notifMenu">通知提醒
+                        <span id="notifDot" style="display:none;position:absolute;top:2px;right:-10px;width:10px;height:10px;background:red;border-radius:50%;"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-status">
+                <!-- 登录按钮（未登录时显示） -->
+                <a href="login.html" id="loginBtn" class="btn btn-login">登录/注册</a>
+                
+                <!-- 用户头像（登录后显示） -->
+                <div id="userProfileBtn" class="profile-btn" style="display: none;">
+                    <button class="btn btn-profile">个人信息</button>
+                    <div class="profile-dropdown">
+                        <a href="profile.html">个人中心</a>
+                        <a href="#" id="logoutBtn">退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="welcome-page">
+            <h2>欢迎来到MindMate！</h2>
+            <blockquote>
+                "不要为明天忧虑，因为明天自有明天的忧虑；一天的难处一天当就够了。"
+                <footer>——《圣经·马太福音》</footer>
+            </blockquote>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>

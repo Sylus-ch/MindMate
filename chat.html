@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能助手 - MindMate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" id="logout">返回首页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-header">
+                <h1>我是你的MindMate</h1>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <!-- 聊天消息将通过JavaScript动态添加 -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" placeholder="输入消息..." id="messageInput">
+                <button class="btn" id="sendButton">发送</button>
+            </div>
+
+            <!-- 新增生成报告按钮 -->
+            <button class="btn" id="generateReportBtn">生成心理报告</button>
+            <!-- 新增清空聊天记录按钮 -->
+            <button class="btn" id="clearChatBtn" style="margin-top:10px;">清空聊天记录</button>
+        </main>
+
+</main>
+    </div>
+
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">加载中...</div>
+    
+
+<script src="assets/js/chat.js"></script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理测评报告 - MindMate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" id="logout">返回首页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="report-container">
+            <h1>心理健康测评报告</h1>
+            <div class="report-meta">
+                <p>测评时间: <span id="report-date"></span></p>
+            </div>
+            <div id="phq9-answers-block"></div>
+            <div class="overall-score">
+                <h2>总体评分</h2>
+                <div class="score-circle">
+                    <div class="score-value" id="overall-score"></div>
+                    <div class="score-max">/100</div>
+                </div>
+                <p class="score-description" id="score-description"></p>
+            </div>
+            <div class="report-section">
+                <h2>心理健康趋势</h2>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+            <div class="report-section">
+                <h2>专业建议</h2>
+                <div id="ai-suggestion-block" style="margin-bottom:20px;display:none;">
+                    <h3>MindMate建议</h3>
+                    <pre id="ai-suggestion-content" style="white-space:pre-wrap;background:#f7f7f7;padding:10px;border-radius:6px;"></pre>
+                </div>
+                <ul id="suggestion-list" style="display:none;"></ul>
+            </div>
+            <div class="report-actions">
+                <button class="btn" id="save-report">保存报告</button>
+                <button class="btn btn-secondary" id="retake-test">重新测试</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/report.js"></script>
+</body>
+</html>

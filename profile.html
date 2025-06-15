@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人资料 - MindMate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .username-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .change-username-btn {
+            padding: 4px 8px;
+            font-size: 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .change-username-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">返回首页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="profile-container">
+            <h1>编辑个人信息</h1>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="profileUsername">用户名</label>
+                    <div class="username-container">
+                        <input type="text" id="profileUsername" name="username" readonly>
+                        <button type="button" id="changeUsernameBtn" class="change-username-btn">修改</button>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">年龄</label>
+                        <input type="number" id="profileAge" name="age" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性别</label>
+                        <select id="profileGender" name="gender">
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">手机号</label>
+                    <input type="tel" id="profilePhone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">个人简介</label>
+                    <textarea id="profileBio" name="bio" rows="4"></textarea>
+                </div>
+
+                <button type="button" class="btn" id="changePasswordBtn">修改密码</button>
+
+                <div id="passwordFields" style="display:none;">
+                    <div class="form-group">
+                        <label for="profilePassword">新密码</label>
+                        <input type="password" id="profilePassword" name="password" placeholder="请输入新密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePasswordConfirm">确认新密码</label>
+                        <input type="password" id="profilePasswordConfirm" name="passwordConfirm" placeholder="请再次输入新密码">
+                    </div>
+                    <button type="button" class="btn" id="confirmChangePasswordBtn">确认修改密码</button>
+                </div>
+
+                <button type="submit" class="btn">保存修改</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="assets/js/profile.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通知中心 - MindMate</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">MindMate</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" id="logout">返回首页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="notifications-container">
+            <div class="notifications-header">
+                <h1>通知中心</h1>
+                <div class="notification-filters">
+                    <select id="filter-type" class="btn btn-secondary">
+                        <option value="all">全部类型</option>
+                        <option value="系统通知">系统通知</option>
+                        <option value="安全提醒">安全提醒</option>
+                        <option value="测试报告">测试报告</option>
+                    </select>
+                </div>
+            </div>
+            
+            <ul class="notification-list"></ul>
+        </main>
+    </div>
+
+    <script src="assets/js/notification.js"></script>
+    
+</body>
+</html>
